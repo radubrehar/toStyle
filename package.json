@@ -4,6 +4,7 @@
   "description": "Convert style objects to style strings",
   "main": "index.js",
   "scripts": {
+    "build": "browserify --standalone toStyle index.js -o dist/toStyle.js",
     "test": "make test",
     "test-w": "make test-w",
     "test-debug": "mocha --debug-brk --require should"

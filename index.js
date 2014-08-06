@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-   prefixProperties: require('./prefixProperties') ,
-   object: require('./toStyleObject'),
-   string: require('./toStyleString')
+   prefixProperties: require('./src/prefixProperties') ,
+   object: require('./src/toStyleObject'),
+   string: require('./src/toStyleString')
 }

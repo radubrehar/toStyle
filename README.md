@@ -50,5 +50,12 @@ toStyleObject({
  */
 ```
 
+## Usage in browser
 
+In browser, make sure you add ```dist/toStyle.js``` to your page. This exposes a global ```toStyle``` variable.
 
+```js
+var toStyleString = toStyle.string
+var toStyleObject = toStyle.object
+
+```
