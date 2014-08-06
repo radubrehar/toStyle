@@ -1,0 +1,36 @@
+{
+  "name": "toStyle",
+  "version": "1.0.0",
+  "description": "Convert style objects to style strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test",
+    "test-w": "make test-w",
+    "test-debug": "mocha --debug-brk --require should"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/radubrehar/toStyle.git"
+  },
+  "dependencies": {
+    "ustring": "^1.1.0"
+  },
+  "devDependencies": {
+    "should": "~4.0.4",
+    "mocha": "~1.20.1"
+  },
+  "author": "Radu Brehar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radubrehar/toStyle/issues"
+  },
+  "keywords": [
+    "style",
+    "css",
+    "object",
+    "conver",
+    "style",
+    "to",
+    "string"
+  ]
+}
