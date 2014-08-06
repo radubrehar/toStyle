@@ -1,5 +1,5 @@
 {
-  "name": "toStyle",
+  "name": "to-style",
   "version": "1.0.0",
   "description": "Convert style objects to style strings",
   "main": "index.js",

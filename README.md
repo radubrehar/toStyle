@@ -1,7 +1,7 @@
 toStyle
 =======
 
-Converts style objects to strings
+Converts style objects to strings. Can be used on node or in the browser.
 
 ## Install
 
@@ -10,8 +10,8 @@ Converts style objects to strings
 ## Usage
 
 ```js
-var toStyleString = require('toStyle').string
-var toStyleObject = require('toStyle').object
+var toStyleString = require('to-style').string
+var toStyleObject = require('to-style').object
 ```
 
 ### toStyleString
