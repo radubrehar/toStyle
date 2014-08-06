@@ -1,11 +1,13 @@
+'use strict'
+
 var ustring = require('ustring')
 
-var prefixInfo = require('./prefixInfo')
+var prefixInfo  = require('./prefixInfo')
 var cssPrefixFn = require('./cssPrefix')
 
-var HAS_OWN = require('./hasOwn')
-var HYPHENATE = ustring.hyphenate
-var IS_OBJECT = require('./isObject')
+var HYPHENATE   = ustring.hyphenate
+var HAS_OWN     = require('./hasOwn')
+var IS_OBJECT   = require('./isObject')
 var IS_FUNCTION = require('./isFunction')
 
 var applyPrefix = function(target, property, value, normalizeFn){

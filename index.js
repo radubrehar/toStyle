@@ -2,6 +2,6 @@
 
 module.exports = {
    prefixProperties: require('./prefixProperties') ,
-   toStyleObject: require('./toStyleObject'),
-   toStyleString: require('./toStyleString')
+   object: require('./toStyleObject'),
+   string: require('./toStyleString')
 }

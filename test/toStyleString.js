@@ -58,4 +58,25 @@ describe('toStyleString', function(){
             'margin: ', '4px'
         ].join(''))
     })
+
+    it('should transform objects with multiple keys - var 2', function(){
+        toStyle({
+            border: {
+                width: 1,
+                color: 'red'
+            },
+            padding: 4,
+            margin: {
+                top: 5
+            }
+        })
+        .should
+        .eql([
+            'border-width: 1px; ',
+            'border-color: red; ',
+            'padding: 4px; ',
+            'margin-top: 5px',
+        ].join(''))
+    })
+
 })

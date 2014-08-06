@@ -1,4 +1,3 @@
-'use strict'
 
 var ustring = require('ustring')
 var camelize = ustring.camelize

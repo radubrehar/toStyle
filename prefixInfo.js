@@ -1,5 +1,6 @@
-var toUpperFirst = require('ustring').toUpperFirst
+'use strict'
 
+var toUpperFirst = require('ustring').toUpperFirst
 var re         = /^(Moz|Webkit|Khtml|O|ms|Icab)(?=[A-Z])/
 
 var docStyle   = typeof document == 'undefined'?
