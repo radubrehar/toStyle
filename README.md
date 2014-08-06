@@ -5,7 +5,7 @@ Converts style objects to strings. Can be used on node or in the browser.
 
 ## Install
 
-```npm install toStyle```
+```npm install to-style```
 
 ## Usage
 
