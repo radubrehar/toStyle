@@ -60,4 +60,14 @@ describe('toStyleObject', function(){
             'margin': '4px'
         })
     })
+
+    it('should work fine with zIndex', function(){
+        toStyle({
+            'zIndex': 4
+        }, { camelize: true})
+        .should
+        .eql({
+            'zIndex': 4
+        })
+    })
 })

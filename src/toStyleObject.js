@@ -6,6 +6,7 @@ var prefixInfo  = require('./prefixInfo')
 var cssPrefixFn = require('./cssPrefix')
 
 var HYPHENATE   = ustring.hyphenate
+var CAMELIZE    = ustring.camelize
 var HAS_OWN     = require('./hasOwn')
 var IS_OBJECT   = require('./isObject')
 var IS_FUNCTION = require('./isFunction')
@@ -32,6 +33,10 @@ var toObject = function(str){
     return result
 }
 
+var CONFIG = {
+    cssUnitless: require('./cssUnitless')
+}
+
 /**
  * @ignore
  * @method toStyleObject
@@ -53,7 +58,10 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
         styles = toObject(styles)
     }
 
-    config = config || {}
+    config = config || CONFIG
+
+    config.cssUnitless = config.cssUnitless || CONFIG.cssUnitless
+
     result = result || {}
 
     var scope    = config.scope || {},
@@ -73,9 +81,13 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
         cssUnit          = (config.cssUnit || scope? scope.cssUnit: null) || 'px',
         prefixProperties = (config.prefixProperties || (scope? scope.prefixProperties: null)) || {},
 
-        normalizeFn = config.normalizeName || HYPHENATE,
+        normalizeFn = config.camelize? CAMELIZE: HYPHENATE
 
-        processed,
+    Object.keys(cssUnitless).forEach(function(key){
+        cssUnitless[normalizeFn(key)] = 1
+    })
+
+    var processed,
         styleName,
 
         propName,
