@@ -14,7 +14,7 @@
     "url": "git://github.com/radubrehar/toStyle.git"
   },
   "dependencies": {
-    "ustring": "^1.1.0"
+    "ustring": "^1.4.0"
   },
   "devDependencies": {
     "should": "~4.0.4",
