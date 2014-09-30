@@ -1,3 +1,4 @@
+'use strict'
 
 var toStyle = require('../src/toStyleString')
 

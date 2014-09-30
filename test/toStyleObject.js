@@ -1,3 +1,4 @@
+'use strict'
 
 var toStyle = require('../src/toStyleObject')
 
@@ -50,14 +51,16 @@ describe('toStyleObject', function(){
                 bottom: 2
             },
             border: '1px solid red',
-            margin: 4
+            margin: 4,
+            borderRadius: 5
         })
         .should
         .eql({
             'padding-top': '3px',
             'padding-bottom': '2px',
             'border': '1px solid red',
-            'margin': '4px'
+            'margin': '4px',
+            'border-radius': '5px'
         })
     })
 

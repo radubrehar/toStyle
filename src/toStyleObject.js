@@ -81,11 +81,12 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
         cssUnit          = (config.cssUnit || scope? scope.cssUnit: null) || 'px',
         prefixProperties = (config.prefixProperties || (scope? scope.prefixProperties: null)) || {},
 
-        normalizeFn = config.camelize? CAMELIZE: HYPHENATE
+        camelize    = config.camelize,
+        normalizeFn = camelize? CAMELIZE: HYPHENATE
 
-    Object.keys(cssUnitless).forEach(function(key){
-        cssUnitless[normalizeFn(key)] = 1
-    })
+    // Object.keys(cssUnitless).forEach(function(key){
+    //     cssUnitless[normalizeFn(key)] = 1
+    // })
 
     var processed,
         styleName,
@@ -104,7 +105,7 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
         propValue = styles[ propName ]
 
         //the hyphenated style name (css property name)
-        styleName = normalizeFn(prepend? prepend + propName: propName)
+        styleName = HYPHENATE(prepend? prepend + propName: propName)
 
         processed = false
         prefix    = false
@@ -120,7 +121,7 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
                 propValue = fnPropValue.value
                 prefix    = fnPropValue.prefix
                 styleName = fnPropValue.name?
-                                normalizeFn(fnPropValue.name):
+                                HYPHENATE(fnPropValue.name):
                                 styleName
 
             } else {
@@ -145,6 +146,8 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
            propValue = propValue.value
         }
 
+        // hyphenStyleName = camelize? HYPHENATE(styleName): styleName
+
         if (processed){
 
             prefix = prefix || !!prefixProperties[styleName]
@@ -168,7 +171,7 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
                     propIsNumber
                 ){
 
-                styleName = normalizeFn(styleName + '-width')
+                styleName = styleName + '-width'
             }
 
             //special border radius treatment
@@ -185,11 +188,10 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
                         styleName = []
 
                         positions[theRest].forEach(function(pos){
-                            styleName.push(normalizeFn('border' + pos + radius))
+                            styleName.push('border' + pos + radius)
                         })
                     } else {
-
-                        styleName = normalizeFn('border'+ theRest + radius)
+                        styleName = 'border'+ theRest + radius
                     }
 
                 })
@@ -214,7 +216,6 @@ var TO_STYLE_OBJECT = function(styles, config, prepend, result){
             }
 
         } else {
-
             //the propValue must be an object, so go down the hierarchy
             TO_STYLE_OBJECT(propValue, config, styleName + '-', result)
         }

@@ -1,3 +1,7 @@
+'use exports'
+
+//make sure properties are in hyphenated form
+
 module.exports = {
     'animation'    : 1,
     'column-count' : 1,
