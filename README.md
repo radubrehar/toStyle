@@ -50,6 +50,26 @@ toStyleObject({
  */
 ```
 
+You can also get your styles in camel-case, just pass a config object as a second argument to ```toStyleObject```, with ```camelize: true```
+
+Example:
+
+```js
+toStyleObject({
+    padding: {
+        top: 10
+    },
+    'border-width': 20
+}, { camelize: true})
+
+/**
+ *  {
+ *      paddingTop: '10px',
+ *      borderWidth: '20px'
+ *  }
+ */
+```
+
 ## Usage in browser
 
 In browser, make sure you add ```dist/toStyle.js``` to your page. This exposes a global ```toStyle``` variable.
