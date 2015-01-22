@@ -1,12 +1,10 @@
 'use strict'
 
-var ustring = require('ustring')
-
 var prefixInfo  = require('./prefixInfo')
 var cssPrefixFn = require('./cssPrefix')
 
-var HYPHENATE   = ustring.hyphenate
-var CAMELIZE    = ustring.camelize
+var HYPHENATE   = require('./stringUtils/hyphenate')
+var CAMELIZE   = require('./stringUtils/camelize')
 var HAS_OWN     = require('./hasOwn')
 var IS_OBJECT   = require('./isObject')
 var IS_FUNCTION = require('./isFunction')
