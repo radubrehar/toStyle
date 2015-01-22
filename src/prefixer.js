@@ -1,10 +1,9 @@
 'use strict'
 
-var ustring = require('ustring')
-var camelize = ustring.camelize
-var hyphenate = ustring.hyphenate
-var toLowerFirst = ustring.toLowerFirst
-var toUpperFirst = ustring.toUpperFirst
+var camelize     = require('./stringUtils/camelize')
+var hyphenate    = require('./stringUtils/hyphenate')
+var toLowerFirst = require('./stringUtils/toLowerFirst')
+var toUpperFirst = require('./stringUtils/toUpperFirst')
 
 var prefixInfo = require('./prefixInfo')
 var prefixProperties = require('./prefixProperties')
