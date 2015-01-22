@@ -1,6 +1,6 @@
 {
   "name": "to-style",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Convert style objects to style strings",
   "main": "index.js",
   "scripts": {
