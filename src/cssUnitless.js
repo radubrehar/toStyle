@@ -8,7 +8,7 @@ module.exports = {
     'columns'      : 1,
     'font-weight'  : 1,
     'opacity'      : 1,
-    'order  '      : 1,
+    'order'        : 1,
     'z-index'      : 1,
     'zoom'         : 1,
     'flex'         : 1,
