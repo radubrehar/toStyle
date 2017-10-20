@@ -23,12 +23,12 @@ module.exports = {
     'orphans'           : 1,
     'tab-size'          : 1,
     'widows'            : 1,
-    'fillOpacity'       : 1,
-    'floodOpacity'      : 1,
-    'stopOpacity'       : 1,
-    'strokeDasharray'   : 1,
-    'strokeDashoffset'  : 1,
-    'strokeMiterlimit'  : 1,
-    'strokeOpacity'     : 1,
-    'strokeWidth'       : 1
+    'fill-opacity'       : 1,
+    'flood-opacity'      : 1,
+    'stop-opacity'       : 1,
+    'stroke-dasharray'   : 1,
+    'stroke-dashoffset'  : 1,
+    'stroke-miterlimit'  : 1,
+    'stroke-opacity'     : 1,
+    'stroke-width'       : 1
 }
